@@ -10,12 +10,10 @@ import java.util.LinkedList;
 import java.util.Map;
 
 public class AveragingBolt extends BaseRichBolt {
-    private OutputCollector collector;
     private LinkedList<Integer> recentNumbers;
 
     @Override
     public void prepare(Map config, TopologyContext context, OutputCollector collector) {
-        this.collector = collector;
         this.recentNumbers = new LinkedList<>();
     }
 
@@ -34,6 +32,6 @@ public class AveragingBolt extends BaseRichBolt {
 
     @Override
     public void declareOutputFields(OutputFieldsDeclarer declarer) {
-        // No output fields for this bolt
+        // Pas de sortie pour ce bolt
     }
 }

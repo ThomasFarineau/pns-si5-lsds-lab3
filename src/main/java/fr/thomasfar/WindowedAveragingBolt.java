@@ -5,7 +5,6 @@ import org.apache.storm.topology.base.BaseWindowedBolt;
 import org.apache.storm.windowing.TupleWindow;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class WindowedAveragingBolt extends BaseWindowedBolt {
     @Override
@@ -17,6 +16,6 @@ public class WindowedAveragingBolt extends BaseWindowedBolt {
 
     @Override
     public void declareOutputFields(OutputFieldsDeclarer declarer) {
-        // No output fields for this bolt
+        // Pas de sortie pour ce bolt
     }
 }
